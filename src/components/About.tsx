@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react'
 import { Award, Heart, Shield } from 'lucide-react'
 import aboutImage from '../assets/about-image.png'
+import sobreMimImage from '../assets/sobre mim.png'
 import { useReveal } from '../hooks/useReveal'
 
 const values = [
@@ -28,6 +30,15 @@ const values = [
 
 function About() {
   const { ref, visible } = useReveal<HTMLDivElement>()
+  const images = [aboutImage, sobreMimImage]
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section id="sobre" className="py-16 md:py-24 lg:py-32 bg-gradient-dark relative">
@@ -44,11 +55,16 @@ function About() {
             {/* Gradient block behind image */}
             <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl bg-gradient-to-br from-[#c9a96e]/20 to-transparent hidden md:block" />
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-gold-lg">
-              <img
-                src={aboutImage}
-                alt="Dra. Beatriz Amorim"
-                className="w-full h-auto object-cover"
-              />
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt="Dra. Beatriz Amorim"
+                  className={`w-full h-auto object-cover transition-opacity duration-1000 ${
+                    index === currentImage ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                  }`}
+                />
+              ))}
             </div>
             {/* Badge */}
             <div className="absolute z-20 bottom-4 right-4 md:bottom-6 md:right-6 glass rounded-full px-5 py-2.5 border border-[#c9a96e]/30 shadow-lg">
