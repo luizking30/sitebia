@@ -44,19 +44,19 @@ function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="nav-underline text-sm text-gray-300 hover:text-[#c9a96e] transition-colors duration-300 tracking-wide"
+              className="nav-underline text-xs xl:text-sm whitespace-nowrap text-gray-300 hover:text-[#c9a96e] transition-colors duration-300 tracking-wide"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contato"
-            className="bg-gradient-gold text-[#1a1a1a] rounded-full px-6 py-2.5 text-sm tracking-wide font-medium hover:shadow-gold-lg transition-all duration-300"
+            className="bg-gradient-gold text-[#1a1a1a] rounded-full px-5 py-2.5 text-xs xl:text-sm whitespace-nowrap tracking-wide font-medium hover:shadow-gold-lg transition-all duration-300"
           >
             Agendar Consulta
           </a>
@@ -64,7 +64,7 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-[#c9a96e]"
+          className="lg:hidden text-[#c9a96e]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
@@ -74,7 +74,7 @@ function Header() {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <nav className="md:hidden glass absolute top-full left-0 right-0 flex flex-col items-center gap-6 py-8 border-t border-[#c9a96e]/20 animate-fade-in">
+        <nav className="lg:hidden glass absolute top-full left-0 right-0 flex flex-col items-center gap-6 py-8 border-t border-[#c9a96e]/20 animate-fade-in">
           {navLinks.map((link) => (
             <a
               key={link.label}
