@@ -24,13 +24,19 @@ const testimonials = [
     name: 'Roberto Almeida',
     role: 'Cliente — Direito Imobiliário',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80',
-    text: 'Resolveu um problema imobiliário que arrastei por meses. Em poucas semanas everything estava resolvido. Extremamente competente e ética. Recomendo de olhos fechados.',
+    text: 'Resolveu um problema imobiliário que arrastei por meses. Em poucas semanas tudo estava resolvido. Extremamente competente e ética. Recomendo de olhos fechados.',
   },
   {
     name: 'Juliana Castro',
     role: 'Cliente — Guarda de Filhos',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80',
     text: 'Como mãe, ela entendeu exatamente o que eu estava sentindo. Conseguiu a guarda da minha filha e me deu toda a segurança que eu precisava. Sou eternamente grata.',
+  },
+  {
+    name: 'Fernando Rocha',
+    role: 'Cliente — Direito do Consumidor',
+    image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=200&q=80',
+    text: 'Tive um problema com uma cobrança indevida que me tirava o sono. A Dra. Beatriz resolveu tudo com agilidade e profissionalismo. Recuperou meu dinheiro e minha tranquilidade.',
   },
 ]
 
