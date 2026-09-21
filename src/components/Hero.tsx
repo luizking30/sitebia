@@ -12,17 +12,15 @@ function Hero() {
       <img
         src={heroBanner}
         alt="Dra. Beatriz Amorim - Advogada"
-        className="md:absolute md:inset-0 md:w-full md:h-full md:object-cover md:object-center w-full h-[55vh] object-cover object-center order-2 md:order-none"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
       />
 
       {/* Dark overlay gradient - desktop only */}
       <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
 
-      {/* Mobile dark overlay on image */}
-      <div className="md:hidden absolute top-0 left-0 right-0 h-[55vh] bg-gradient-to-b from-[#1a1a1a] via-[#1a1a1a]/60 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 px-6 md:pl-20 lg:pl-32 max-w-2xl pt-28 pb-8 md:py-0 animate-fade-in-up order-1 md:order-none">
+      <div className="relative z-10 px-6 md:pl-20 lg:pl-32 max-w-2xl pt-28 pb-20 md:py-0 animate-fade-in-up">
         {/* Icon */}
         <div className="flex mb-6 md:mb-8">
           <div className="w-14 h-14 md:w-16 md:h-16 border border-[#c9a96e]/40 rounded-full flex items-center justify-center backdrop-blur-sm shadow-gold">
