@@ -31,14 +31,7 @@ function WhyChooseMe() {
         </div>
 
         {/* Comparison Table */}
-        <div className="mt-16 md:mt-20">
-          <div className="text-center mb-10">
-            <h3 className="font-serif text-2xl md:text-3xl text-white mb-4">
-              A Diferença Que Importa
-            </h3>
-            <div className="w-16 h-px bg-gradient-gold mx-auto" />
-          </div>
-
+        <div>
           <div className="max-w-3xl mx-auto rounded-2xl border border-gray-800 overflow-hidden bg-[#1a1a1a]/50">
             {/* Table Header */}
             <div className="grid grid-cols-3 bg-[#1a1a1a] border-b border-gray-800">
