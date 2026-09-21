@@ -8,18 +8,21 @@ const values = [
     title: 'Humanizada',
     description:
       'Cada caso é único. Atendimento personalizado, ouvindo e compreendendo as necessidades de cada cliente.',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
   },
   {
     icon: Shield,
     title: 'Ética',
     description:
       'Atuação com total transparência, sigilo e compromisso com os princípios da advocacia.',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80',
   },
   {
     icon: Award,
     title: 'Excelência',
     description:
       'Dedicação integral e técnica jurídica refinada para garantir os melhores resultados.',
+    image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
   },
 ]
 
@@ -91,18 +94,32 @@ function About() {
             return (
               <div
                 key={value.title}
-                className="text-center p-8 rounded-2xl border border-gray-800 hover:border-[#c9a96e]/30 hover:shadow-gold transition-all duration-300 group bg-[#1a1a1a]/50"
+                className="rounded-2xl overflow-hidden border border-gray-800 hover:border-[#c9a96e]/30 hover:shadow-gold transition-all duration-300 group bg-[#1a1a1a]/50"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="w-14 h-14 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-[#c9a96e]/20 to-transparent border border-[#c9a96e]/30 group-hover:from-[#c9a96e]/30 transition-all duration-300">
-                  <Icon size={24} className="text-[#c9a96e]" />
+                {/* Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={value.image}
+                    alt={value.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/50 to-transparent" />
+                  {/* Icon overlay */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-[#c9a96e] to-[#a8895a] shadow-lg">
+                    <Icon size={24} className="text-[#1a1a1a]" />
+                  </div>
                 </div>
-                <h3 className="font-serif text-2xl text-white mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed font-light">
-                  {value.description}
-                </p>
+
+                {/* Content */}
+                <div className="text-center p-6 md:p-8">
+                  <h3 className="font-serif text-2xl text-white mb-4 group-hover:text-[#c9a96e] transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-500 leading-relaxed font-light">
+                    {value.description}
+                  </p>
+                </div>
               </div>
             )
           })}
