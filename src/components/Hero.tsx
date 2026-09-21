@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden"
+      className="relative md:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden"
     >
       {/* Mobile: Text on top, Image below / Desktop: Image as background */}
       {/* Background image - desktop only as overlay, mobile as block */}
@@ -20,7 +20,7 @@ function Hero() {
 
 
       {/* Content */}
-      <div className="relative z-10 px-6 md:pl-20 lg:pl-32 max-w-2xl pt-28 pb-20 md:py-0 animate-fade-in-up">
+      <div className="relative z-10 px-6 md:pl-20 lg:pl-32 max-w-2xl pt-28 pb-12 md:py-0 animate-fade-in-up">
         {/* Icon */}
         <div className="flex mb-6 md:mb-8">
           <div className="w-14 h-14 md:w-16 md:h-16 border border-[#c9a96e]/40 rounded-full flex items-center justify-center backdrop-blur-sm shadow-gold">
