@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Award, Heart, Shield } from 'lucide-react'
+import { Award, Heart, Shield, GraduationCap, Scale, Briefcase } from 'lucide-react'
 import aboutImage from '../assets/about-image.png'
 import sobreMimImage from '../assets/sobre mim.png'
 import { useReveal } from '../hooks/useReveal'
@@ -25,6 +25,27 @@ const values = [
     description:
       'Dedicação integral e técnica jurídica refinada para garantir os melhores resultados.',
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
+  },
+]
+
+const credentials = [
+  {
+    icon: GraduationCap,
+    year: '2019',
+    title: 'Bacharelado em Direito',
+    description: 'Graduação em Direito por instituição reconhecida. Base sólida em todas as áreas jurídicas.',
+  },
+  {
+    icon: Scale,
+    year: '2020',
+    title: 'Inscrição na OAB/DF',
+    description: 'Regularmente inscrita na Ordem dos Advogados do Brasil, seção Distrito Federal.',
+  },
+  {
+    icon: Briefcase,
+    year: '2020 - Presente',
+    title: 'Atuação em Direito de Família',
+    description: 'Especialização prática em Direito de Família, Sucessões, Imobiliário e do Consumidor.',
   },
 ]
 
@@ -100,6 +121,45 @@ function About() {
             >
               Agende uma Consulta
             </a>
+          </div>
+        </div>
+
+        {/* Credentials Timeline */}
+        <div className="mb-16 md:mb-24">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-[#c9a96e] text-xs md:text-sm tracking-[0.25em] md:tracking-[0.3em] uppercase mb-3">
+              Formação & Credenciais
+            </p>
+            <h3 className="font-serif text-2xl md:text-3xl text-white">
+              Qualificações Profissionais
+            </h3>
+            <div className="w-16 h-px bg-gradient-gold mx-auto mt-4" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {credentials.map((cred, index) => {
+              const Icon = cred.icon
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-800 hover:border-[#c9a96e]/30 hover:shadow-gold transition-all duration-300 group bg-[#1a1a1a]/50"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-14 h-14 rounded-full flex items-center justify-center bg-gradient-to-br from-[#c9a96e]/20 to-transparent border border-[#c9a96e]/30 mb-4 group-hover:from-[#c9a96e]/30 transition-all duration-300">
+                    <Icon size={22} className="text-[#c9a96e]" />
+                  </div>
+                  <span className="text-[#c9a96e] text-xs tracking-widest uppercase mb-2">
+                    {cred.year}
+                  </span>
+                  <h4 className="text-white text-sm font-medium mb-2">
+                    {cred.title}
+                  </h4>
+                  <p className="text-gray-500 text-sm leading-relaxed font-light">
+                    {cred.description}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </div>
 

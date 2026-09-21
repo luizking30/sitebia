@@ -33,8 +33,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: 'Endereço',
-    value: 'Brasília, DF',
-    href: '#',
+    value: 'SHS Quadra 01, Bloco A, Sala 101 — Asa Sul, Brasília/DF',
+    href: 'https://maps.google.com/?q=Brasilia+DF',
   },
   {
     icon: Clock,
@@ -88,7 +88,7 @@ function Contact() {
         </div>
 
         {/* WhatsApp & Instagram Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
             href="https://wa.me/5562993818863"
             target="_blank"
@@ -107,6 +107,49 @@ function Contact() {
             <InstagramIcon size={20} />
             Seguir no Instagram
           </a>
+        </div>
+
+        {/* Location & Online Service */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Map */}
+          <div className="rounded-2xl overflow-hidden border border-gray-800 h-64 md:h-72">
+            <iframe
+              title="Localização - Brasília DF"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30757.6479!2d-47.8828!3d-15.7939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b1b%3A0x0!2sBras%C3%ADlia%2C%20DF!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'grayscale(0.3) invert(0.9)' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          {/* Online Service Info */}
+          <div className="flex flex-col justify-center p-6 md:p-8 rounded-2xl border border-gray-800 bg-[#1a1a1a]/50">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#c9a96e]/20 to-transparent border border-[#c9a96e]/30">
+                <MapPin size={22} className="text-[#c9a96e]" />
+              </div>
+              <div>
+                <h3 className="font-serif text-xl text-white">Atendimento</h3>
+                <p className="text-gray-500 text-sm">Presencial e Online</p>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed font-light mb-4">
+              Atendimento presencial em Brasília/DF e online para clientes em
+              qualquer estado do Brasil. Não importa onde você esteja — sua
+              causa será tratada com a mesma dedicação.
+            </p>
+            <a
+              href="https://maps.google.com/?q=Brasilia+DF"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#c9a96e] text-sm tracking-wide hover:gap-3 transition-all duration-300 inline-flex items-center gap-2"
+            >
+              Ver no mapa
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

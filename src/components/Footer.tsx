@@ -51,6 +51,15 @@ function Footer() {
             <a href="#areas" className="nav-underline text-sm text-gray-400 hover:text-[#c9a96e] transition-colors duration-300">
               Áreas de Atuação
             </a>
+            <a href="#depoimentos" className="nav-underline text-sm text-gray-400 hover:text-[#c9a96e] transition-colors duration-300">
+              Depoimentos
+            </a>
+            <a href="#blog" className="nav-underline text-sm text-gray-400 hover:text-[#c9a96e] transition-colors duration-300">
+              Blog
+            </a>
+            <a href="#faq" className="nav-underline text-sm text-gray-400 hover:text-[#c9a96e] transition-colors duration-300">
+              FAQ
+            </a>
             <a href="#contato" className="nav-underline text-sm text-gray-400 hover:text-[#c9a96e] transition-colors duration-300">
               Contato
             </a>
