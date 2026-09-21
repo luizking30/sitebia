@@ -22,7 +22,7 @@ const contactInfo = [
     icon: Phone,
     label: 'Telefone',
     value: '(62) 99381-8863',
-    href: 'https://wa.me/5562993818863',
+    href: 'https://wa.me/5562993818863?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta.',
   },
   {
     icon: Mail,
@@ -90,7 +90,7 @@ function Contact() {
         {/* WhatsApp & Instagram Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
-            href="https://wa.me/5562993818863"
+            href="https://wa.me/5562993818863?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 bg-[#25D366] text-white rounded-full px-8 py-4 text-sm tracking-wide font-medium hover:bg-[#1da851] hover:shadow-lg hover:shadow-[#25D366]/40 transition-all duration-300"

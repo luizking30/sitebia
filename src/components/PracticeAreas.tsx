@@ -78,6 +78,7 @@ function PracticeAreas() {
                   <img
                     src={area.image}
                     alt={area.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/40 to-transparent" />

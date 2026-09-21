@@ -1,4 +1,4 @@
-import { Quote } from 'lucide-react'
+import { Quote, Star } from 'lucide-react'
 import { useReveal } from '../hooks/useReveal'
 
 const testimonials = [
@@ -74,6 +74,11 @@ function Testimonials() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <Quote size={32} className="text-[#c9a96e]/40 mb-4" />
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={16} className="text-[#c9a96e] fill-[#c9a96e]" />
+                ))}
+              </div>
               <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light mb-6 italic">
                 "{testimonial.text}"
               </p>
@@ -81,6 +86,7 @@ function Testimonials() {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
+                  loading="lazy"
                   className="w-12 h-12 rounded-full object-cover border border-[#c9a96e]/30"
                 />
                 <div>
