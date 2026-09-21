@@ -5,18 +5,18 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative md:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden"
+      className="relative md:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden md:pt-20"
     >
       {/* Mobile: Text on top, Image below / Desktop: Image as background */}
       {/* Background image - desktop only as overlay, mobile as block */}
       <img
         src={heroBanner}
         alt="Dra. Beatriz Amorim - Advogada"
-        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+        className="hidden md:block absolute top-20 left-0 right-0 bottom-0 w-full h-auto object-cover object-center"
       />
 
       {/* Dark overlay gradient - desktop only */}
-      <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
+      <div className="hidden md:block absolute top-20 left-0 right-0 bottom-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
 
 
       {/* Content */}
