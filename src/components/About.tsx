@@ -8,21 +8,21 @@ const values = [
     title: 'Humanizada',
     description:
       'Cada caso é único. Atendimento personalizado, ouvindo e compreendendo as necessidades de cada cliente.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=600&q=80',
   },
   {
     icon: Shield,
     title: 'Ética',
     description:
       'Atuação com total transparência, sigilo e compromisso com os princípios da advocacia.',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=600&q=80',
   },
   {
     icon: Award,
     title: 'Excelência',
     description:
       'Dedicação integral e técnica jurídica refinada para garantir os melhores resultados.',
-    image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
   },
 ]
 
