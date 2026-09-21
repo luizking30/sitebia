@@ -1,4 +1,4 @@
-import { MessageCircle, CalendarCheck, Search, Compass, FileCheck } from 'lucide-react'
+import { MessageCircle, CalendarCheck, Search, Compass, FileCheck, Award } from 'lucide-react'
 import { useReveal } from '../hooks/useReveal'
 
 const steps = [
@@ -32,6 +32,12 @@ const steps = [
     title: 'Acompanhamento',
     description: 'Você acompanha cada etapa do processo com comunicação clara e constante.',
   },
+  {
+    icon: Award,
+    number: '06',
+    title: 'Resolução',
+    description: 'Seu caso resolvido com a melhor solução possível e total transparência.',
+  },
 ]
 
 function HowItWorks() {
@@ -58,7 +64,7 @@ function HowItWorks() {
         {/* Steps */}
         <div
           ref={ref}
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 ${
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 ${
             visible ? 'reveal visible' : 'reveal'
           }`}
         >
@@ -67,7 +73,7 @@ function HowItWorks() {
             return (
               <div
                 key={step.number}
-                className="relative flex flex-col items-center text-center p-6 rounded-2xl border border-gray-800 hover:border-[#c9a96e]/30 hover:shadow-gold transition-all duration-300 group bg-[#1a1a1a]/50"
+                className="relative flex flex-col items-center text-center p-6 md:p-8 rounded-2xl border border-gray-800 hover:border-[#c9a96e]/30 hover:shadow-gold transition-all duration-300 group bg-[#1a1a1a]/50"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Step Number */}
@@ -88,10 +94,6 @@ function HowItWorks() {
                   {step.description}
                 </p>
 
-                {/* Connector line - desktop only */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-gradient-to-r from-[#c9a96e]/30 to-transparent" />
-                )}
               </div>
             )
           })}

@@ -32,7 +32,7 @@ function WhyChooseMe() {
 
         {/* Comparison Table */}
         <div>
-          <div className="max-w-3xl mx-auto rounded-2xl border border-gray-800 overflow-hidden bg-[#1a1a1a]/50">
+          <div className="rounded-2xl border border-gray-800 overflow-hidden bg-[#1a1a1a]/50">
             {/* Table Header */}
             <div className="grid grid-cols-3 bg-[#1a1a1a] border-b border-gray-800">
               <div className="p-4 md:p-5 text-center">
